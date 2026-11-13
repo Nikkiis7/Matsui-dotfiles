@@ -1,6 +1,8 @@
-# Matsui-dotfiles
+<img width="982" height="291" alt="screenshot-2026-11-13_04-31-08" src="https://github.com/user-attachments/assets/77d03443-d845-45f8-9607-cffc55322e60" />
 
 Esse projeto foi criado para compartilhar o meu rice e as configurações que eu uso no meu Linux. Ainda estou aprendendo a mexer no GitHub, então peço desculpas se algo estiver desorganizado. Qualquer sugestão é bem-vinda!
+
+[Desktop]<img width="2560" height="1440" alt="screenshot-2026-11-13_02-49-23" src="https://github.com/user-attachments/assets/a2e2b03f-8241-416a-832b-2bc8227df976" />
 
 
 **Plataforma:** Arch Linux + Hyprland
