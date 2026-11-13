@@ -7,6 +7,9 @@ Esse projeto foi criado para compartilhar o meu rice e as configurações que eu
 [Desktop]<img width="2560" height="1440" alt="screenshot-2026-11-13_02-49-23" src="https://github.com/user-attachments/assets/a2e2b03f-8241-416a-832b-2bc8227df976" />
 
 
+[![Vídeo do rice](https://github.com/user-attachments/assets/2c4c47cf-ceee-4231-a24d-98aed875462d)](https://github.com/user-attachments/assets/d7f61856-b8df-4882-80bc-a33647b11cb6)
+
+
 **Plataforma:** Arch Linux + Hyprland
 
 > Minha config do Hyprland é em Lua (`hyprland.lua`), então você precisa de uma versão do Hyprland que suporte esse formato.
