@@ -34,8 +34,7 @@ Esse projeto foi criado para compartilhar o meu rice e as configurações que eu
 
 ## Detalhes do setup
 
-- **Fonte:** *(preencha: ex. JetBrainsMono Nerd Font)*
-- **Tema de cores:** *(preencha: ex. Catppuccin Mocha)*
+- **Fonte:** *(Iosevka e JetBrainsMono Nerd Font)*
 - **Wallpaper:** `heaven.png`
 
 ---
