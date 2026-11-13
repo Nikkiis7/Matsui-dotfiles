@@ -1,5 +1,5 @@
 #!/bin/bash
-# Ajuste para a pasta onde o seu programa salva os prints
+# Isso aqui é para o dunst notificar quando você tirar print
 dir="$HOME/Imagens"
 mkdir -p "$dir"
 
