@@ -1,0 +1,301 @@
+/* Alma */
+
+window#waybar {
+    background-color: rgba(18,12,32,0.88);
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid rgba(190,150,255,0.10);
+    color: white;
+}
+
+/* Fonte */
+
+* {
+    font-family: "Iosevka Nerd Font", "Iosevka", monospace;
+    font-size: 14px;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+}
+
+/* Relógio */
+
+#clock-group {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 5px;
+    padding: 0 6px;
+}
+
+#clock.time,
+#clock.date {
+    font-size: 20px;
+    padding: 0 8px;
+    margin: 0;
+    color: #ffffff;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* Desligar */
+
+#power-group {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 5px;
+    padding: 0 6px;
+}
+
+#custom-power,
+#custom-reboot,
+#custom-suspend,
+#custom-logout {
+    font-size: 18px;
+    padding: 0 8px;
+    margin: 0;
+    background: transparent;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+#custom-power {
+    color: #ff6b9d;
+    padding: 0 10px 0 6px;
+}
+
+#custom-power:hover,
+#custom-reboot:hover,
+#custom-suspend:hover,
+#custom-logout:hover {
+    color: #ffb86c;
+}
+
+/* Audio */
+
+#audio-group {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 4px;
+    padding: 0 12px;
+    transition: all 0.25s ease;
+}
+
+#audio-group:hover {
+    background-color: #b48cff;
+}
+
+#pulseaudio {
+    background: transparent;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+#pulseaudio.muted {
+    color: rgba(236,228,255,0.45);
+}
+
+#audio-group:hover #pulseaudio {
+    color: rgba(18,12,32,0.88);
+}
+
+/* Tray */
+
+
+#tray {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 4px;
+    padding: 0 10px;
+}
+
+tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+/* Arch */
+
+#logo {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 5px;
+    transition: all 0.35s ease;
+}
+
+#logo:hover {
+    background-color: #b48cff;
+}
+
+#custom-arch {
+    background: transparent;
+    margin: 0;
+    padding: 0 4px;
+    min-width: 34px;
+    font-size: 20px;
+    color: #b48cff;
+}
+
+#logo:hover #custom-arch {
+    color: rgba(18,12,32,0.88);
+}
+
+/* Janela */
+
+/* Janela */
+
+#window-group {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 4px;
+    padding: 0 14px;
+    transition: all 0.25s ease;
+}
+
+#window-group:hover {
+    background-color: #b48cff;
+}
+
+#window {
+    background: transparent;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+#window label {
+    font-size: 18px;
+}
+
+#window-group:hover #window {
+    color: rgba(18,12,32,0.88);
+}
+
+/* Separador */
+
+#custom-separator {
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    margin: 0 4px;
+    padding: 0 6px;
+}
+
+/* Workspaces */
+
+#workspaces {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 8px;
+    margin: 5px 4px;
+    padding: 0 6px;
+}
+
+#workspaces button {
+    background: none;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    outline: none;
+    transition: color 0.2s ease;
+    color: rgba(255, 255, 255, 0.45);
+    min-width: 36px;
+    min-height: 0;
+    padding: 0;
+    margin: 3px 2px;
+    font-size: 20px;
+}
+
+#workspaces button:hover {
+    background: none;
+    background-image: none;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background: none;
+    color: #ffffff;
+}
+
+/* CPU e RAM */
+
+#custom-cpu-icon,
+#custom-ram-icon {
+    background: transparent;
+    color: #b48cff;
+    font-size: 20px;
+    min-width: 24px;
+    padding: 0 2px 0 2px;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+#cpu,
+#memory {
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0 8px;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+#sysinfo {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 4px;
+    padding: 0 6px;
+    transition: all 0.35s ease;
+}
+
+#sysinfo:hover {
+    background-color: #b48cff;
+}
+
+#sysinfo:hover #custom-cpu-icon,
+#sysinfo:hover #custom-ram-icon,
+#sysinfo:hover #cpu,
+#sysinfo:hover #memory {
+    color: rgba(18,12,32,0.88);
+}
+
+
+/* MPRIS */
+
+#mpris-group {
+    background-color: rgba(190,150,255,0.10);
+    border-radius: 5px;
+    margin: 5px 4px;
+    padding: 0 14px;
+    transition: all 0.25s ease;
+}
+
+#mpris-group:hover {
+    background-color: #b48cff;
+}
+
+#mpris {
+    background: transparent;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
+#mpris.paused {
+    color: rgba(236,228,255,0.45);
+}
+
+#mpris-group:hover #mpris {
+    color: rgba(18,12,32,0.88);
+}
+
+/* Feito por Ryan Matsui :D*/

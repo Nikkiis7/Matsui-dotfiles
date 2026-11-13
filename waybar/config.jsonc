@@ -1,0 +1,230 @@
+// - Alma - \\
+{
+  "layer": "top",
+  "position": "top",
+  "height": 45,
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": ["group/logo","group/sysinfo", "group/window-group","custom/separator"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["group/mpris-group","custom/separator#right","tray","group/audio-group", "group/clock-group", "group/power-group"],
+
+  // - Relógio - \\
+
+   "group/clock-group": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 400,
+            "transition-left-to-right": true,
+            "click-to-reveal": false
+        },
+        "modules": ["clock#time", "clock#date"]
+    },
+
+"clock#time": {
+  "format": "{:%I:%M %p}",
+    "interval": 1,
+    "tooltip": false
+},
+
+"clock#date": {
+        "format": "> {:%d/%m/%Y}",
+        "tooltip": false
+    },
+
+
+  // - Desligar - \\
+
+  "group/power-group": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 400,
+            "transition-left-to-right": false,
+            "click-to-reveal": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/reboot",
+            "custom/suspend",
+            "custom/logout"
+        ]
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "systemctl poweroff"
+    },
+
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "systemctl reboot"
+    },
+
+    "custom/suspend": {
+        "format": "󰤄",
+        "tooltip": false,
+        "on-click": "systemctl suspend"
+    },
+
+    "custom/logout": {
+        "format": "󰍃",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+
+  // - Audio- \\
+
+   "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Mudo",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"],
+            "headphone": "󰋋",
+            "headset": "󰋎"
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "tooltip-format": "{desc}"
+    },
+
+    "group/audio-group": {
+    "orientation": "inherit",
+    "modules": ["pulseaudio"]
+},
+
+  // - Tray - \\
+
+   "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    },
+
+// - Arch - \\
+
+"group/logo": {
+    "orientation": "inherit",
+    "modules": ["custom/arch"]
+},
+
+   "custom/arch": {
+        "format": "\uf303 ",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
+// - Janela - \\ 
+
+"hyprland/window": {
+    "format": "{class}",
+    "separate-outputs": true,
+    "max-length": 30,
+    "tooltip": false,
+    "rewrite": {
+        "firefox": "󰈹 Firefox",
+        "kitty": " Kitty",
+        "foot": "󰆍 Foot",
+        "(.*)[Dd]iscord(.*)": "󰙯 Discord",
+        "steam": "󰓓 Steam",
+        "code-oss": "󰨞 VS Code",
+        "Spotify": "󰓇 Spotify",
+        "org.telegram.desktop": "󰔁 Telegram",
+        "thunar": "󰉋 Thunar",
+        "": " Desktop"
+    }
+},
+
+"group/window-group": {
+    "orientation": "inherit",
+    "modules": ["hyprland/window"]
+},
+
+// - Separador  - \\ 
+
+"custom/separator": {
+    "format": "\u2502",
+    "tooltip": false
+},
+
+// - Workspaces - \\ 
+
+"hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "tooltip": false,
+    "persistent-workspaces": {
+        "*": 4
+    },
+    "format-icons": {
+        "1": "\uf120",
+        "2": "\uf0ac",
+        "3": "\uf07b",
+        "4": "\uf001",
+        "default": "\uf111"
+    }
+},
+
+// - RAM e CPU - \\ 
+
+"group/sysinfo": {
+    "orientation": "inherit",
+    "modules": ["custom/cpu-icon", "cpu", "custom/ram-icon", "memory"]
+},
+
+
+"custom/cpu-icon": {
+    "format": "\uf2db",
+    "tooltip": false
+},
+
+"custom/ram-icon": {
+    "format": "\udb80\udf5b",
+    "tooltip": false
+},
+
+"cpu": {
+    "format": "{usage}%",
+    "interval": 2,
+    "tooltip": false
+},
+
+"memory": {
+    "format": "{percentage}%",
+    "interval": 5,
+    "tooltip": false
+}, 
+
+"custom/separator#right": {
+    "format": "\u2502",
+    "tooltip": false
+ },
+
+"mpris": {
+    "format": "{player_icon} {title} - {artist}",
+    "format-paused": "{status_icon} {title} - {artist}",
+    "player-icons": {
+        "default": "\uf04b",
+        "spotify": "\uf1bc",
+        "firefox": "\uf269"
+    },
+    "status-icons": {
+        "paused": "\uf04c"
+    },
+    "max-length": 35,
+    "tooltip": false
+},
+
+"group/mpris-group": {
+    "orientation": "inherit",
+    "modules": ["mpris"]
+}
+
+}
+
+
+// - Feito por Ryan Matsui :D
