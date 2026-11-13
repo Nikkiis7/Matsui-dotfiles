@@ -94,6 +94,8 @@ cp heaven.png ~/Imagens/
 
 **6. Reinicie o Hyprland** (saia da sessão e entre de novo) ou rode:
 
+**IMPORTANTE** Antes de qualquer coisa, primeiro verifique o seu hyprland.lua e arrume a resolução para a do seu monitor, pois pode dar algum problema se você usar uma resolução que não existe ou que seu monitor não suporta**
+
 ```bash
 hyprctl reload
 ```
@@ -106,6 +108,6 @@ Na primeira vez que abrir o Neovim, os plugins serão instalados automaticamente
 
 - Se algo não funcionar, confira se todos os programas da lista de dependências estão instalados.
 - Os atalhos de teclado estão no arquivo `hypr/hyprland.lua`.
-- Monitores, teclado e outras configurações específicas do meu PC podem precisar de ajuste no `hyprland.lua`.
+- Monitores, teclado e outras configurações específicas do meu PC podem precisar de ajuste no `hyprland.lua`. Portanto, antes de aplicar qualquer coisa, primeiro altere a resolução, para o seu monitor, se não seu sistema pode quebrar!
 
 Feito por [Ryan Matsui](https://github.com/Nikkiis7)
