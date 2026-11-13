@@ -39,17 +39,14 @@ Esse projeto foi criado para compartilhar o meu rice e as configurações que eu
 Instale os programas antes de copiar as configs:
 
 ```bash
-sudo pacman -S --needed hyprland hyprpaper hyprlock waybar rofi-wayland kitty dunst fastfetch yazi neovim starship git
+sudo pacman -S hyprpaper hyprlock waybar rofi kitty dunst fastfetch yazi neovim starship git
 ```
 
-Você também precisa de uma **Nerd Font** (senão os ícones da Waybar aparecem quebrados). Exemplo:
+Você também precisa de uma **Nerd Font** (senão os ícones da Waybar aparecem quebrados). eu uso a Iosevka (instale também a JetBrains):
 
 ```bash
-sudo pacman -S --needed ttf-jetbrains-mono-nerd
+sudo pacman -S ttf-iosevka-nerd ttf-jetbrains-mono-nerd
 ```
-
-> Troque pela fonte que você usar. Se algum pacote não for encontrado, veja se o nome mudou ou se ele está no AUR.
-
 ---
 
 ## Instalação
@@ -84,8 +81,10 @@ chmod +x ~/.local/bin/*.sh
 
 **5. Wallpaper:** copie o `heaven.png` para uma pasta sua e edite o caminho em `~/.config/hypr/hyprpaper.conf`:
 
+Se você não quiser editar o arquivo, basta criar uma pasta chamada "Imagens" e colar o wallpaper com o nome "heaven.png" que irá funcionar.
+
 ```bash
-cp heaven.png ~/Pictures/
+cp heaven.png ~/Imagens/
 ```
 
 **6. Reinicie o Hyprland** (saia da sessão e entre de novo) ou rode:
