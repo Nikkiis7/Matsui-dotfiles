@@ -12,3 +12,4 @@ Apps necessários:
 - NeoVim (Editor de código);
 - Hyprland (Interface gráfica)
 - Starship (Plugin do zshell)
+- Grim (Print)
