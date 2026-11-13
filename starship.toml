@@ -1,3 +1,5 @@
+# Sinceramente, esse arquivo está totalmente perdido no meu .config. ele é usado pra personalizar a seta do starship.
+
 "$schema" = 'https://starship.rs/config-schema.json'
 add_newline = true
 
