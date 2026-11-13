@@ -1,0 +1,101 @@
+configuration {
+    modi:                "drun,run,window";
+    show-icons:          true;
+    drun-display-format: "{name}";
+    display-drun:        "";
+    display-run:         "";
+    display-window:      "";
+}
+
+* {
+    bg:         #120c20e0;
+    surface:    #be96ff1a;
+    surface-hi: #be96ff33;
+    text:       #ece4ff;
+    muted:      #ece4ff73;
+    accent:     #b48cff;
+    danger:     #ff6b9d;
+    border:     #b48cff40;
+
+    background-color: transparent;
+    text-color:       @text;
+    font:             "Iosevka Nerd Font 13";
+}
+
+window {
+    width:            560px;
+    background-color: @bg;
+    border:           2px solid;
+    border-color:     @border;
+    border-radius:    5px;
+    padding:          14px;
+}
+
+mainbox {
+    spacing:  12px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @surface;
+    border-radius:    999px;
+    padding:          10px 16px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    text-color:        #ffffff;
+    placeholder:       "Buscar...";
+    placeholder-color: @muted;
+}
+
+listview {
+    lines:        7;
+    columns:      1;
+    spacing:      4px;
+    scrollbar:    false;
+    fixed-height: true;
+}
+
+element {
+    padding:       8px 14px;
+    border-radius: 999px;
+    spacing:       10px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @muted;
+}
+
+element selected.normal {
+    background-color: @surface-hi;
+    text-color:       @text;
+}
+
+element normal.urgent,
+element selected.urgent {
+    text-color: @danger;
+}
+
+element normal.active,
+element selected.active {
+    text-color: @accent;
+}
+
+element-icon {
+    size:             22px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}

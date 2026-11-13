@@ -1,0 +1,69 @@
+* {
+    bg:      #120c20;
+    bg-alt:  #231a36;
+    accent:  #b48cff;
+    fg:      #ffffff;
+    muted:   #ece4ff;
+    urgent:  #ff6b9d;
+
+    font: "Iosevka Nerd Font 14";
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 700px;
+    background-color: @bg;
+    border: 2px;
+    border-color: #b48cff40;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+mainbox {
+    spacing: 20px;
+    children: [ message, listview ];
+}
+
+message {
+    background-color: @bg-alt;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+textbox {
+    horizontal-align: 0.5;
+    text-color: @muted;
+}
+
+listview {
+    columns: 5;
+    lines: 1;
+    spacing: 12px;
+    fixed-columns: true;
+    scrollbar: false;
+}
+
+element {
+    children: [ element-text ];
+    padding: 30px 0px;
+    background-color: @bg-alt;
+    border-radius: 5px;
+    text-color: @fg;
+}
+
+element-text {
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "Iosevka Nerd Font Mono 34";
+    text-color: inherit;
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color: @bg;
+}
