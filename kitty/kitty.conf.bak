@@ -1,0 +1,26 @@
+# Fonte
+font_family      JetBrainsMono Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        12.0
+
+# Janela
+background_opacity   0.75
+window_padding_width 10
+hide_window_decorations yes
+confirm_os_window_close 0
+
+# Cursor
+cursor_shape          beam
+cursor_blink_interval 0
+
+# Rolagem e comportamento
+scrollback_lines 5000
+enable_audio_bell no
+copy_on_select clipboard
+mouse_hide_wait 3.0
+
+# Abas (se usar)
+tab_bar_style powerline
+tab_powerline_style round
