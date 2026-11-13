@@ -1,5 +1,7 @@
 <img width="979" height="286" alt="screenshot-2026-11-13_04-33-04" src="https://github.com/user-attachments/assets/0d384884-61a5-4090-bdb4-23641d1540aa" />
 
+---
+
 Esse projeto foi criado para compartilhar o meu rice e as configurações que eu uso no meu Linux. Ainda estou aprendendo a mexer no GitHub, então peço desculpas se algo estiver desorganizado. Qualquer sugestão é bem-vinda!
 
 [Desktop]<img width="2560" height="1440" alt="screenshot-2026-11-13_02-49-23" src="https://github.com/user-attachments/assets/a2e2b03f-8241-416a-832b-2bc8227df976" />
