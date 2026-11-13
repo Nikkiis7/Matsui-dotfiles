@@ -108,6 +108,7 @@ Na primeira vez que abrir o Neovim, os plugins serão instalados automaticamente
 
 - Se algo não funcionar, confira se todos os programas da lista de dependências estão instalados.
 - Os atalhos de teclado estão no arquivo `hypr/hyprland.lua`.
-- Monitores, teclado e outras configurações específicas do meu PC podem precisar de ajuste no `hyprland.lua`. Portanto, antes de aplicar qualquer coisa, primeiro altere a resolução, para o seu monitor, se não seu sistema pode quebrar!
+- Monitores, teclado e outras configurações específicas do meu PC podem precisar de ajuste no `hyprland.lua`. Portanto, antes de aplicar qualquer coisa, primeiro altere as configuraçẽos principais, se não seu sistema pode quebrar!
+- Óbviamente, TODAS as suas configurações serão perdidas e serão trocadas pelas minhas, portanto, tenha muito cuidado e faça backup de seus arquivos.
 
 Feito por [Ryan Matsui](https://github.com/Nikkiis7)
