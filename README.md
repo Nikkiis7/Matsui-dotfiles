@@ -1,7 +1,7 @@
 # HyprNova-Projeto
 dotfiles do meu rice :)
 
-- Apps necessários:
+Apps necessários:
 
 - Waybar (Barra);
 - Rofi(Navegador de Aplicativos + Interface de Energia);
@@ -11,3 +11,4 @@ dotfiles do meu rice :)
 - Kitty (Terminal);
 - NeoVim (Editor de código);
 - Hyprland (Interface gráfica)
+- Starship (Plugin do zshell)
