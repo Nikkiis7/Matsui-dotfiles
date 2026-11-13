@@ -1,0 +1,7 @@
+[filetype]
+rules = [
+  # pastas
+  { url = "*/", fg = "#b48cff" },
+  # todos os outros arquivos
+  { url = "*", fg = "#b48cff" },
+]

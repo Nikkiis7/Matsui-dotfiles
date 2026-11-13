@@ -1,0 +1,15 @@
+[opener]
+appimage = [
+    { run = '%s', orphan = true, desc = "Executar AppImage", for = "unix" }
+]
+
+edit = [
+    { run = 'nvim "%s1"', block = true, desc = "Editar com Neovim", for = "unix" }
+]
+
+[open]
+prepend_rules = [
+    { url = "*.AppImage", use = "appimage" },
+    { url = "*.appimage", use = "appimage" },
+    { mime = "text/*", use = "edit" },
+]
