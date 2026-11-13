@@ -2,7 +2,6 @@
 
 Esse projeto foi criado para compartilhar o meu rice e as configurações que eu uso no meu Linux. Ainda estou aprendendo a mexer no GitHub, então peço desculpas se algo estiver desorganizado. Qualquer sugestão é bem-vinda!
 
-![rice](print.png)
 
 **Plataforma:** Arch Linux + Hyprland
 
