@@ -27,6 +27,21 @@ window#waybar {
     padding: 0 6px;
 }
 
+#clock-group:hover,
+#clock-group:hover #clock {
+    background-color: #b48cff;
+    color: rgba(18,12,32,0.88);
+}
+    
+#clock  {
+    background: transparent;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    transition: all 0.25s ease;
+}
+
 #clock.time,
 #clock.date {
     font-size: 20px;
@@ -282,7 +297,8 @@ tray > .passive {
     background-color: #b48cff;
 }
 
-#mpris {
+#mpris,
+#custom-nada {
     background: transparent;
     color: #ffffff;
     padding: 0;
@@ -294,7 +310,10 @@ tray > .passive {
     color: rgba(236,228,255,0.45);
 }
 
-#mpris-group:hover #mpris {
+#mpris-group:hover #mpris,
+#mpris-group:hover #mpris label,
+#mpris-group:hover #custom-nada,
+#mpris-group:hover #custom-nada label {
     color: rgba(18,12,32,0.88);
 }
 

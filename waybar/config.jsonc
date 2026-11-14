@@ -24,12 +24,14 @@
     },
 
 "clock#time": {
+  "on-click": "quickshell ipc call calendar toggle",
   "format": "{:%I:%M %p}",
     "interval": 1,
     "tooltip": false
 },
 
 "clock#date": {
+        "on-click": "quickshell ipc call calendar toggle",
         "format": "> {:%d/%m/%Y}",
         "tooltip": false
     },
@@ -130,10 +132,10 @@
         "foot": "󰆍 Foot",
         "(.*)[Dd]iscord(.*)": "󰙯 Discord",
         "steam": "󰓓 Steam",
-        "code-oss": "󰨞 VS Code",
+        "nvim": "Neovim",
         "Spotify": "󰓇 Spotify",
         "org.telegram.desktop": "󰔁 Telegram",
-        "thunar": "󰉋 Thunar",
+        "yazi": "󰉋 Yazi",
         "": " Desktop"
     }
 },
@@ -205,8 +207,11 @@
  },
 
 "mpris": {
+        "on-click": "quickshell ipc call musicplayer toggle",
+        "on-click-right": "playerctl play-pause",
     "format": "{player_icon} {title} - {artist}",
     "format-paused": "{status_icon} {title} - {artist}",
+    "format-stopped": "󰝚 Nada tocando",
     "player-icons": {
         "default": "\uf04b",
         "spotify": "\uf1bc",
@@ -215,13 +220,20 @@
     "status-icons": {
         "paused": "\uf04c"
     },
-    "max-length": 35,
+    "max-length": 28,
+    "min-length": 28,
+    "tooltip": false
+},
+
+"custom/nada": {
+    "exec": "playerctl status >/dev/null 2>&1 || echo '󰝚 Nada tocando'",
+    "interval": 2,
     "tooltip": false
 },
 
 "group/mpris-group": {
     "orientation": "inherit",
-    "modules": ["mpris"]
+    "modules": ["mpris", "custom/nada"]
 }
 
 }
