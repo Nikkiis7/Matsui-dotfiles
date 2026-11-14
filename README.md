@@ -30,6 +30,7 @@ Esse projeto foi criado para compartilhar o meu rice e as configurações que eu
 | `nvim/` | Neovim | Editor (plugins com lazy.nvim) |
 | `starship.toml` | Starship | Prompt do terminal |
 | `bin/` | Scripts | `print-watch.sh` e `controle-watch.sh`, chamados pelo Hyprland |
+| `quickshell/` | Quickshell | Widgets |
 | `heaven.png` | Wallpaper | Imagem de fundo |
 
 ## Detalhes do setup
