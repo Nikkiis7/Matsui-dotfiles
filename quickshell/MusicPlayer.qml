@@ -1,0 +1,167 @@
+import Quickshell
+import Quickshell.Wayland
+import Quickshell.Services.Mpris
+import Quickshell.Io
+import QtQuick
+
+PanelWindow {
+  id: win
+
+  IpcHandler {
+    target: "musicplayer"
+    function toggle(): void { win.open = !win.open }
+  }
+
+  // prefere o player que está tocando; senão o primeiro da lista
+  property var lastActive: null
+
+  property var player: {
+    const list = Mpris.players.values
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].isPlaying) return list[i]
+    }
+    if (lastActive && list.indexOf(lastActive) >= 0) return lastActive
+    return list.length > 0 ? list[0] : null
+  }
+
+  onPlayerChanged: if (player && player.isPlaying) lastActive = player
+
+  property bool open: false
+  property bool shown: player !== null && open
+
+  property string accent: "#b48cff"
+  property string fonte: "Iosevka Nerd Font"
+
+  visible: shown || card.opacity > 0.01
+
+  WlrLayershell.layer: WlrLayer.Top
+  WlrLayershell.keyboardFocus: win.shown ? WlrKeyboardFocus.OnDemand : WlrKeyboardFocus.None
+  exclusionMode: ExclusionMode.Ignore
+
+  anchors {
+    top: true
+    right: true
+  }
+  margins {
+    top: 66
+    right: 184
+  }
+
+  implicitWidth: 325
+  implicitHeight: 132
+  color: "transparent"
+
+  // atualiza a barra de progresso enquanto toca
+  Timer {
+    interval: 1000
+    repeat: true
+    running: win.player !== null && win.player.isPlaying
+    onTriggered: win.player.positionChanged()
+  }
+
+  Item {
+    anchors.fill: parent
+    focus: true
+    Keys.onEscapePressed: win.open = false
+  }
+
+  Rectangle {
+    id: card
+    width: parent.width
+    height: 104
+    radius: 10
+    color: "#f2100c20"
+    border.color: "#2e2650"
+    border.width: 1
+
+    opacity: win.shown ? 1 : 0
+    Behavior on opacity { NumberAnimation { duration: 450; easing.type: Easing.OutCubic } }
+
+    transform: Translate {
+      y: win.shown ? 0 : -28
+      Behavior on y { NumberAnimation { duration: 450; easing.type: Easing.OutCubic } }
+    }
+
+    Row {
+      anchors.fill: parent
+      anchors.margins: 12
+      spacing: 12
+
+      Rectangle {
+        width: 80
+        height: 80
+        radius: 8
+        color: "#1c1636"
+
+        Text {
+          anchors.centerIn: parent
+          text: "󰎆"
+          color: win.accent
+          font.family: win.fonte
+          font.pixelSize: 28
+        }
+
+        Image {
+          anchors.fill: parent
+          source: win.player ? win.player.trackArtUrl : ""
+          fillMode: Image.PreserveAspectCrop
+        }
+      }
+
+      Column {
+        width: parent.width - 80 - 12
+        spacing: 6
+
+        Text {
+          width: parent.width
+          text: win.player ? win.player.trackTitle : ""
+          color: "#e8e2ff"
+          font.family: win.fonte
+          font.pixelSize: 14
+          font.bold: true
+          elide: Text.ElideRight
+        }
+
+        Text {
+          width: parent.width
+          text: win.player ? win.player.trackArtist : ""
+          color: "#9b92b8"
+          font.family: win.fonte
+          font.pixelSize: 12
+          elide: Text.ElideRight
+        }
+
+        Seekbar {
+          width: parent.width
+          player: win.player
+          accent: win.accent
+        }
+
+        Row {
+          spacing: 8
+
+          Btn {
+            icon: "󰒮"
+            accent: win.accent
+            fonte: win.fonte
+            onClicked: if (win.player) win.player.previous()
+          }
+
+          Btn {
+            icon: (win.player && win.player.isPlaying) ? "󰏤" : "󰐊"
+            accent: win.accent
+            fonte: win.fonte
+            onClicked: if (win.player) win.player.togglePlaying()
+          }
+
+          Btn {
+            icon: "󰒭"
+            accent: win.accent
+            fonte: win.fonte
+            onClicked: if (win.player) win.player.next()
+          }
+        }
+      }
+    }
+  }
+}
